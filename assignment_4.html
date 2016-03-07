@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Reninder</title>
+	</head>
+	<body>
+		<div id="page_container"> 
+			<p id="pos"></p>
+		</div>	
+
+		<script>
+			document.addEventListener('mouseup', getPosition);
+			var currentPos = 0;
+			var data = document.getElementById('pos');
+
+			function getPosition(e)
+			{
+				currentPos = "X : "+ e.pageX +"; Y : "+ e.pageY +"; Time : "+ Date();
+				
+				data.innerHTML +=  currentPos +"<br>";
+			}
+		</script>
+	</body>
+</html>
